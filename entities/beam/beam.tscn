@@ -1,0 +1,6 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://entities/beam/beam.gd" id="1_uuvug"]
+
+[node name="Beam" type="Node2D" unique_id=580645278]
+script = ExtResource("1_uuvug")
