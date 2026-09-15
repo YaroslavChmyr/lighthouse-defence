@@ -1,0 +1,21 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://entities/enemies/enemy_walker.gd" id="1_mc6n8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5s8l5"]
+
+[node name="EnemyWalker" type="CharacterBody2D" unique_id=446236254]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_mc6n8")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=235083723]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+mouse_filter = 2
+color = Color(0.55, 0.1, 0.1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2056156567]
+shape = SubResource("RectangleShape2D_5s8l5")

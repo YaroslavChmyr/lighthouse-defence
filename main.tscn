@@ -1,6 +1,7 @@
 [gd_scene format=3]
 
 [ext_resource type="PackedScene" path="res://entities/player/player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" path="res://entities/enemies/enemy_walker.tscn" id="2_0xm2m"]
 
 [node name="Main" type="Node2D" unique_id=489211300]
 
@@ -11,3 +12,21 @@ color = Color(0.05, 0.05, 0.06, 1)
 
 [node name="Player" parent="." unique_id=1692181849 instance=ExtResource("1_ig7tw")]
 position = Vector2(640, 360)
+
+[node name="EnemyWalker1" parent="." unique_id=446236254 instance=ExtResource("2_0xm2m")]
+position = Vector2(840, 360)
+
+[node name="EnemyWalker2" parent="." unique_id=677367033 instance=ExtResource("2_0xm2m")]
+position = Vector2(640, 560)
+
+[node name="EnemyWalker3" parent="." unique_id=1406352354 instance=ExtResource("2_0xm2m")]
+position = Vector2(400, 250)
+
+[node name="EnemyWalker4" parent="." unique_id=353740749 instance=ExtResource("2_0xm2m")]
+position = Vector2(900, 500)
+
+[node name="EnemyWalker5" parent="." unique_id=1409838565 instance=ExtResource("2_0xm2m")]
+position = Vector2(100, 100)
+
+[node name="EnemyWalker6" parent="." unique_id=1588480331 instance=ExtResource("2_0xm2m")]
+position = Vector2(1200, 650)
