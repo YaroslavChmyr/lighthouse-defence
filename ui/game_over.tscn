@@ -1,0 +1,27 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://ui/game_over.gd" id="1_oo8kp"]
+
+[node name="GameOver" type="CanvasLayer" unique_id=2006064026]
+process_mode = 3
+layer = 2
+visible = false
+script = ExtResource("1_oo8kp")
+
+[node name="Dim" type="ColorRect" parent="." unique_id=470523854]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="Message" type="Label" parent="." unique_id=1528866786]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_font_sizes/font_size = 40
+text = "GAME OVER
+
+Press Enter or Space to retry"
+horizontal_alignment = 1
+vertical_alignment = 1

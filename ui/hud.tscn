@@ -1,0 +1,14 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://ui/hud.gd" id="1_rbyyf"]
+
+[node name="Hud" type="CanvasLayer" unique_id=940765043]
+script = ExtResource("1_rbyyf")
+
+[node name="HealthLabel" type="Label" parent="." unique_id=1950918745]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 16.0
+offset_bottom = 16.0
+theme_override_font_sizes/font_size = 24
+text = "HP: 3"

@@ -3,6 +3,8 @@
 [ext_resource type="Script" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" path="res://entities/player/player.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" path="res://entities/enemies/enemy_walker.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" path="res://ui/hud.tscn" id="4_lquwl"]
+[ext_resource type="PackedScene" path="res://ui/game_over.tscn" id="5_7mycd"]
 
 [node name="Main" type="Node2D" unique_id=489211300]
 script = ExtResource("1_h2yge")
@@ -32,3 +34,7 @@ position = Vector2(100, 100)
 
 [node name="EnemyWalker6" parent="." unique_id=1588480331 instance=ExtResource("2_0xm2m")]
 position = Vector2(1200, 650)
+
+[node name="Hud" parent="." unique_id=940765043 instance=ExtResource("4_lquwl")]
+
+[node name="GameOver" parent="." unique_id=2006064026 instance=ExtResource("5_7mycd")]

@@ -6,6 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_abrql"]
 size = Vector2(24, 24)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sglur"]
+size = Vector2(24, 24)
+
 [node name="Player" type="CharacterBody2D" unique_id=1692181849]
 collision_mask = 0
 script = ExtResource("1_symyc")
@@ -21,3 +24,10 @@ mouse_filter = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=159505539]
 shape = SubResource("RectangleShape2D_abrql")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1735142020]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=53941861]
+shape = SubResource("RectangleShape2D_sglur")
