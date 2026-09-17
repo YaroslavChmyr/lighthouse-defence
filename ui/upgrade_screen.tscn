@@ -1,0 +1,78 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://ui/upgrade_screen.gd" id="1_2yq80"]
+
+[node name="UpgradeScreen" type="CanvasLayer" unique_id=1439142080]
+process_mode = 3
+layer = 2
+visible = false
+script = ExtResource("1_2yq80")
+
+[node name="Dim" type="ColorRect" parent="." unique_id=1919855023]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="Layout" type="VBoxContainer" parent="." unique_id=579328241]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="Title" type="Label" parent="Layout" unique_id=1277589697]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Choose an upgrade"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Options" type="HBoxContainer" parent="Layout" unique_id=1723026857]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="Option1" type="PanelContainer" parent="Layout/Options" unique_id=64651878]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Layout/Options/Option1" unique_id=1842539142]
+custom_minimum_size = Vector2(280, 160)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Upgrade"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Option2" type="PanelContainer" parent="Layout/Options" unique_id=1429405622]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Layout/Options/Option2" unique_id=307825312]
+custom_minimum_size = Vector2(280, 160)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Upgrade"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Option3" type="PanelContainer" parent="Layout/Options" unique_id=423323644]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Layout/Options/Option3" unique_id=1988046987]
+custom_minimum_size = Vector2(280, 160)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Upgrade"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Hint" type="Label" parent="Layout" unique_id=1412417799]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "A/D or Left/Right to choose, Enter or Space to pick"
+horizontal_alignment = 1
+vertical_alignment = 1

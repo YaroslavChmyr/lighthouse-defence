@@ -5,6 +5,7 @@
 [ext_resource type="Script" path="res://systems/wave_spawner.gd" id="3_lquwl"]
 [ext_resource type="PackedScene" path="res://ui/hud.tscn" id="4_lquwl"]
 [ext_resource type="PackedScene" path="res://ui/game_over.tscn" id="5_7mycd"]
+[ext_resource type="PackedScene" path="res://ui/upgrade_screen.tscn" id="6_7mycd"]
 
 [node name="Main" type="Node2D" unique_id=489211300]
 script = ExtResource("1_h2yge")
@@ -23,3 +24,5 @@ script = ExtResource("3_lquwl")
 [node name="Hud" parent="." unique_id=940765043 instance=ExtResource("4_lquwl")]
 
 [node name="GameOver" parent="." unique_id=2006064026 instance=ExtResource("5_7mycd")]
+
+[node name="UpgradeScreen" parent="." unique_id=1439142080 instance=ExtResource("6_7mycd")]

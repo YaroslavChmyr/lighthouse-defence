@@ -1,6 +1,7 @@
 class_name WaveSpawner
 extends Node
 
+signal ready_for_next_wave(wave_number: int)
 signal wave_started(wave_number: int)
 
 const ENEMY_SCENE := preload("res://entities/enemies/enemy_walker.tscn")
@@ -19,18 +20,21 @@ var target: Node2D
 
 var _wave_number: int = 0
 var _break_remaining: float = 0.0
+var _is_awaiting_start: bool = false
 
 
 func _physics_process(delta: float) -> void:
-	if get_child_count() > 0:
+	if _is_awaiting_start or get_child_count() > 0:
 		return
 	_break_remaining -= delta
 	if _break_remaining > 0.0:
 		return
-	_start_next_wave()
+	_is_awaiting_start = true
+	ready_for_next_wave.emit(_wave_number + 1)
 
 
-func _start_next_wave() -> void:
+func start_next_wave() -> void:
+	_is_awaiting_start = false
 	_wave_number += 1
 	var wave: Dictionary = WAVES[mini(_wave_number, WAVES.size()) - 1]
 	for i in wave["count"]:
