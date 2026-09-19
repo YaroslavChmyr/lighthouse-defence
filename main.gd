@@ -6,6 +6,8 @@ extends Node2D
 @onready var _game_over: GameOver = $GameOver
 @onready var _upgrade_screen: UpgradeScreen = $UpgradeScreen
 
+var _taken_one_shot_ids: Array = []
+
 
 func _ready() -> void:
 	_wave_spawner.target = _player
@@ -22,11 +24,13 @@ func _on_ready_for_next_wave(wave_number: int) -> void:
 	if wave_number == 1:
 		_wave_spawner.start_next_wave()
 		return
-	_upgrade_screen.show_offer(Upgrades.draw_offer())
+	_upgrade_screen.show_offer(Upgrades.draw_offer(_taken_one_shot_ids))
 	get_tree().paused = true
 
 
 func _on_upgrade_chosen(upgrade: Dictionary) -> void:
+	if upgrade.get("one_shot", false):
+		_taken_one_shot_ids.append(upgrade["id"])
 	_player.apply_upgrade(upgrade["id"])
 	get_tree().paused = false
 	_wave_spawner.start_next_wave()
