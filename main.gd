@@ -26,7 +26,8 @@ func _on_ready_for_next_wave(wave_number: int) -> void:
 	get_tree().paused = true
 
 
-func _on_upgrade_chosen(_upgrade: Dictionary) -> void:
+func _on_upgrade_chosen(upgrade: Dictionary) -> void:
+	_player.apply_upgrade(upgrade["id"])
 	get_tree().paused = false
 	_wave_spawner.start_next_wave()
 
