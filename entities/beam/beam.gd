@@ -1,13 +1,12 @@
 extends Node2D
 
 const ARC_SEGMENTS := 16
-const ENEMY_GROUP := &"enemies"
 
 @export_range(0.0, 720.0, 1.0, "radians_as_degrees") var sweep_speed: float = deg_to_rad(90.0)
 @export_range(0.5, 90.0, 0.5, "radians_as_degrees") var beam_half_width: float = deg_to_rad(12.0)
 @export_range(1.0, 1500.0, 1.0) var beam_range: float = 400.0
 @export var beam_damage: int = 1
-@export_range(0.0, 2.0, 0.01) var hit_cooldown: float = 0.25
+@export_range(0.0, 2.0, 0.01) var hit_cooldown: float = 0.3
 @export var beam_color: Color = Color(1.0, 0.9, 0.4, 0.35)
 
 var beam_angle: float = 0.0
@@ -42,7 +41,7 @@ func _tick_hit_cooldowns(delta: float) -> void:
 
 
 func _hit_enemies_in_beam() -> void:
-	for enemy in get_tree().get_nodes_in_group(ENEMY_GROUP):
+	for enemy in get_tree().get_nodes_in_group(EnemyWalker.GROUP):
 		var id := enemy.get_instance_id()
 		if _hit_cooldowns.has(id):
 			continue

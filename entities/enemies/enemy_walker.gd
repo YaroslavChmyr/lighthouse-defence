@@ -1,4 +1,7 @@
+class_name EnemyWalker
 extends CharacterBody2D
+
+const GROUP := &"enemies"
 
 @export var max_health: int = 3
 @export var move_speed: float = 60.0
@@ -9,7 +12,7 @@ var target: Node2D
 
 func _ready() -> void:
 	health = max_health
-	add_to_group("enemies")
+	add_to_group(GROUP)
 
 
 func _physics_process(_delta: float) -> void:

@@ -13,6 +13,7 @@ var _selected_index: int = 0
 
 
 func show_offer(offer: Array) -> void:
+	assert(offer.size() == _slots.size(), "Offer size must match the number of slots in the scene")
 	_offer = offer
 	for i in _slots.size():
 		var upgrade: Dictionary = offer[i]
